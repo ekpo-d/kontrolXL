@@ -1,0 +1,50 @@
+@import '../tools/bootstrap';
+@import '../tools/animate';
+@import '../base/placeholders';
+
+
+#users{
+  @extend %bg;
+
+  .overview{
+    color: white;
+
+    nav, .content{
+      height: 100%;
+    }
+    nav{
+      @extend %nav;
+    }
+    .content{
+      margin-left: 120px;
+      padding: 0;
+
+      .main-header{
+        @extend %main-header;
+      }
+
+      .panel{
+        @extend %panel;
+      }
+      .thumbnail{
+        @extend %thumbnail;
+      }
+      .blue{
+        color: $blue;
+      }
+      .green{
+        color: $green;
+      }
+
+    }
+    .pad{
+      padding-top: 30px;
+    }
+    .desc{
+      @extend %desc;
+    }
+  }
+}
+
+
+@import '../base/mediaqueries';

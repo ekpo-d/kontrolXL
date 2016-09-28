@@ -1,0 +1,31 @@
+
+#preloader{
+  padding: 0;
+  display: none;
+
+  .loader{
+    height: 100vh;
+    background-color: #0d0921;
+    color: white;
+    font-family: 'Dosis', sans-serif;
+  }
+  .center-div{
+    padding-top: 25vh;
+    max-width: 700px;
+    margin: 0 auto;
+
+    h1{
+      padding: 20px 0 10px 0;
+      font-size: 5em;
+      font-weight: 200;
+      border-bottom: 1px solid white;
+    }
+    p{
+      padding-top: 10px;
+      font-size: 1.5em;
+    }
+  }
+  .img-container img{
+    min-width: 200px;
+  }
+}

@@ -1,0 +1,27 @@
+@media screen and (max-width: 1024px) {
+  .main-nav{
+    display: none;
+  }
+  .mobile-nav{
+    display: none;
+  }
+  #index .overview .content, #users .overview .content, #slack .overview .content{
+    margin-left: 0;
+  }
+  .length{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  div.col-sm-6.circle {
+    display: none;
+  }
+  header.main-header.text-center{
+    display: none;
+  }
+   #users .overview .content .chart{
+     width: 300px;
+     height: 300px;
+   }
+}

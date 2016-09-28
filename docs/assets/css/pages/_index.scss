@@ -1,0 +1,80 @@
+body{
+  background: url(../img/bg.png) fixed;
+  background-size: cover;
+  background-position: center center;
+  font-family: 'Pavanam', sans-serif;
+  padding: 0;
+}
+#index{
+  padding: 0;
+
+  .overview{
+    color: white;
+
+    nav, .content{
+      height: 100%;
+    }
+    nav{
+      @extend %nav;
+    }
+    .content{
+      margin-left: 120px;
+      padding: 0;
+
+      .main-header{
+        @extend %main-header;
+      }
+      .panel{
+        @extend %panel;
+      }
+      .thumbnail{
+        @extend %thumbnail;
+      }
+      .thumbnail #graph1 path {
+				stroke: #1ac6d8;
+				stroke-width: 2;
+				fill: none;
+			}
+      .chart {
+      margin-top: 20px;
+      position: relative;
+      width: 155px;
+      height: 155px;
+      }
+      .doughnutTip {
+      position: absolute;
+      min-width: 30px;
+      max-width: 300px;
+      padding: 5px 15px;
+      border-radius: 1px;
+      background: #0d0921;
+      color: white;
+      font-size: 17px;
+      text-transform: uppercase;
+      text-align: center;
+      line-height: 1.3;
+      letter-spacing: .06em;
+      pointer-events: none;
+      &::after {
+          position: absolute;
+          left: 50%;
+          bottom: -6px;
+          content: "";
+          height: 0;
+          margin: 0 0 0 -6px;
+          border-right: 5px solid transparent;
+          border-left: 5px solid transparent;
+          border-top: 6px solid rgba(0,0,0,.7);
+          line-height: 0;
+      }
+      }
+      .chart path:hover { opacity: 0.65; }
+    }
+    .pad{
+      padding-top: 15px;
+    }
+    .desc{
+      @extend %desc;
+    }
+  }
+}
