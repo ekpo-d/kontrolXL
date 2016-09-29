@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Kontrol XL</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="Kontrol XL - data visualization designed with you in mind">
+	<link href="assets/css/all.min.css" rel="stylesheet">
+</head>
+
+<!-- Body -->
+<body>
+	<section class="container-fluid" id="preloader">
+		<div class="container-fluid loader">
+			<div class="container center-div">
+				<div class="row">
+					<div class="col-sm-6 img-container">
+						<img class="img-responsive" src="assets/img/kontrolXL.svg" alt="Kontrol XL" />
+					</div>
+					<div class="col-sm-6">
+						<h1>KONTROL <sup>XL</sup></h1>
+						<p class="text-center">Data Visualization Designed for You</p>
+					</div>
+				</div>
+				<br /><br /><br /><br /><br /><br />
+				<p class="text-center"><span id="js-rotating">Loading... | Fetching your data... | Computing data... | Normalizing... | Preparing your control panel.. | Doing some other awesome stuff...</span></p>
+			</div>
+
+		</div>
+	</section>
+
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery-2.2.4.min.js"></script>
+  <script src="assets/js/morphext.min.js"></script>
+	<script src="assets/js/kontrol.js"></script>
+	<script>
+	// one time events
+  // index - ajax -overview request
+  var index = $('#preloader')
+
+	//fadeIn effect
+  index.fadeIn(1000)
+
+  index.on('ajax/loader', function(){
+    function load (){
+      $('html').load('overview.html')
+    }
+    setTimeout(load, 5000)
+  })
+
+  index.trigger('ajax/loader')
+
+	//flashing text on index
+  $("#js-rotating").Morphext({
+    animation: "flash",
+    separator: "|",
+    speed: 3000
+  })
+
+	</script>
+
+</body>
+</html>
