@@ -1,12 +1,16 @@
 @media screen and (max-width: 1024px) {
+  header.main-header.text-center{
+    display: none;
+  }
   .main-nav{
     display: none;
   }
   .mobile-nav{
-    display: none;
+    // display: none;
   }
   #index .overview .content, #users .overview .content, #slack .overview .content{
     margin-left: 0;
+    padding-top: 20px;
   }
   .length{
     width: 100%;
@@ -17,11 +21,13 @@
   div.col-sm-6.circle {
     display: none;
   }
-  header.main-header.text-center{
-    display: none;
-  }
    #users .overview .content .chart{
      width: 300px;
      height: 300px;
    }
+}
+@media screen and (min-width: 1024px){
+  .mobile-header{
+    display: none;
+  }
 }

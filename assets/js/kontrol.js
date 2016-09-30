@@ -54,8 +54,29 @@ if ( typeof Object.create !== 'function' ) {
 
 	// $('nav a').createKontrol()
 
-	// one time event
+	// one time events or helpers or whatever you wonna call them :(
+	var $container = $('.central-container'),
+			$body = $('body')
 
+	$('.hamburger').on('click', function(){
+
+		if ($container.hasClass('slideLeft')){
+			$container.removeClass('slideLeft')
+			$body.css('overflow', 'auto')
+		}
+		else{
+			$container.addClass('slideLeft')
+			$body.css('overflow', 'hidden')
+		}
+  })
+
+	$('.mobile-nav li a').map(function(index, elem){
+		$(elem).on('click', function(){
+			console.log('link clicked')
+			$container.removeClass('slideLeft')
+			$body.css('overflow', 'auto')
+		})
+	})
 
 	function checkSize(){
 	if ($(window).width() >= 1024){
